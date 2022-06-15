@@ -1,84 +1,48 @@
-![Licence](https://img.shields.io/badge/licence-AGPL--3-blue.svg)
-[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/125/13.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-l10n-switzerland-125)
-[![Build Status](https://travis-ci.org/OCA/l10n-switzerland.svg?branch=13.0)](https://travis-ci.org/OCA/l10n-switzerland)
-[![Coverage Status](https://coveralls.io/repos/OCA/l10n-switzerland/badge.svg?branch=13.0)](https://coveralls.io/r/OCA/l10n-switzerland?branch=13.0)
 
+[![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/l10n-switzerland&target_branch=13.0)
+[![Build Status](https://travis-ci.com/OCA/l10n-switzerland.svg?branch=13.0)](https://travis-ci.com/OCA/l10n-switzerland)
+[![codecov](https://codecov.io/gh/OCA/l10n-switzerland/branch/13.0/graph/badge.svg)](https://codecov.io/gh/OCA/l10n-switzerland)
+[![Translation Status](https://translation.odoo-community.org/widgets/l10n-switzerland-13-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/l10n-switzerland-13-0/?utm_source=widget)
 
-Odoo/OpenERP Swiss Localization
-===============================
+<!-- /!\ do not modify above this line -->
+
+# Odoo Swiss localization
 
 This repository hosts official Swiss localization provided by the OCA.
 
-It extends Odoo/OpenERP to add needed functionalities to use Odoo/OpenERP in Switzerland.
+<!-- /!\ do not modify below this line -->
 
+<!-- prettier-ignore-start -->
 
-l10n_ch_bank
-------------
+[//]: # (addons)
 
-Provides the list of Swiss banks offices with all relative data as clearing, city, etc.
-
-
-l10n_ch_zip
------------
-
-Provides the list of Swiss postal ZIPs for auto-completion.
-
-
-l10n_ch_payment_slip
---------------------
-
-Adds ISR (PVR/BVR/ESR) report on invoice. Every ISR element position can be configured independently by company.
-Multiple payment terms on invoices are supported.
-
-It will also allow you to do the import of V11 bank statement files and do an automatic reconciliation.
-
-
-l10n_ch_base_bank
------------------
-
-Adds the support of postal account and bank postal account norm.
-The partner bank form allows you to input Swiss bank account and postal account in a correct manner.
-
-
-l10n_ch_dta
------------
-
-Provides support of DTA payment file protocol to generate electronic payment file.
-This feature will be deprecated around the end of 2016.
-
-
-l10n_ch_pain_credit_transfert
------------------------------
-
-Provides support of SEPA/PAIN electronic payment file.
-
-
-(replaces former l10n_ch_sepa module)
-
-
-l10n_ch_scan_bvr
+Available addons
 ----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[ebill_paynet](ebill_paynet/) | 13.0.1.0.2 |  | Paynet platform bridge implementation
+[ebill_paynet_customer_free_ref](ebill_paynet_customer_free_ref/) | 13.0.1.0.1 |  | Glue module: ebill_paynet and sale_order_customer_free_ref
+[l10n_ch_account_tags](l10n_ch_account_tags/) | 13.0.1.0.1 |  | Switzerland Account Tags
+[l10n_ch_base_bank](l10n_ch_base_bank/) | 13.0.1.0.0 |  | Types and number validation for swiss electronic pmnt. DTA, ESR
+[l10n_ch_invoice_reports](l10n_ch_invoice_reports/) | 13.0.1.1.1 |  | Extend invoice to add ISR/QR payment slip
+[l10n_ch_isr_payment_grouping](l10n_ch_isr_payment_grouping/) | 13.0.1.0.0 |  | Extend account to ungroup ISR
+[l10n_ch_isrb](l10n_ch_isrb/) | 13.0.1.0.0 |  | Switzerland - ISR with Bank
+[l10n_ch_states](l10n_ch_states/) | 13.0.1.0.0 |  | Switzerland Country States
+[server_env_ebill_paynet](server_env_ebill_paynet/) | 13.0.1.0.1 |  | Server environment for Ebill Paynet
 
-Allows you to scan the ISR references and automatically create the proper supplier invoices
+[//]: # (end addons)
 
-l10n_ch_hr_payroll
-------------------
+<!-- prettier-ignore-end -->
 
-Provides Swiss Payroll Rules.
-Allows to specify a LPP range to contract and 2 kinds of children to employees.
+## Licenses
 
-l10n_ch_import_cresus
----------------------
+This repository is licensed under [AGPL-3.0](LICENSE).
 
-This module add the ability to import CSV file from Crésus software (www.cresus.ch)
+However, each module can have a totally different license, as long as they adhere to Odoo Community Association (OCA)
+policy. Consult each module's `__manifest__.py` file, which contains a `license` key
+that explains its license.
 
-l10n_cd_import_winbiz
----------------------
-
-Allows to import accounting from WinBIZ software (www.winbiz.ch) using Excel or XML format.
-
-
-
-Translation Status
-------------------
-[![Transifex Status](https://www.transifex.com/projects/p/OCA-l10n-switzerland-13-0/chart/image_png)](https://www.transifex.com/projects/p/OCA-l10n-switzerland-13-0)
+----
+OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit
+organization whose mission is to support the collaborative development of Odoo features
+and promote its widespread use.
